@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main ()
+{
+	//dichiarazione variabili
+	int a, b;
+	int risposta;
+	
+	//richiede quale operazione eseguire
+	printf ("Digitare 1 per la moltiplicazione o 2 per la media\n");
+	scanf ("%d", &risposta);
+	
+	if(risposta == 1) //se la risposta è 1 esegue la moltiplicazione 
+	{
+		printf ("Inserie primo numero:");
+		scanf ("%d",  &a);
+		printf ("Inserie secondo numero:");
+		scanf ("%d",  &b);
+		printf ("Moltiplicazione:%d", (a*b));
+	}
+	else
+	{
+	    if(risposta == 2)  //se la risposta è 2 esegue la media
+	    {
+		    printf ("Inserie primo numero:");
+		    scanf ("%d",  &a);
+		    printf ("Inserie secondo numero:");
+		    scanf ("%d",  &b);
+		    printf ("Media:%.1f", (float)(a+b)/2); //restituisce il valore della media in float con una cifra decimale
+	    }
+	    else
+	    	printf ("Risposta non valida!\n"); //se l'utente inserisce un valore non valido restituisce un messaggio di errore
+    }
+    
+    return 0;
+}
